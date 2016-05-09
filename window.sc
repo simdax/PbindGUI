@@ -45,8 +45,8 @@ PbindView : View {
 			\mouseDownAction
 		)}
 	action{
-		x=
-		this.perform(
+		s ?? {s=stream.next};
+		x=		this.perform(
 			[\makeRayures, \makePlot][s],
 			this
 		)
@@ -63,6 +63,9 @@ PbindView : View {
 		}.onResize=
 		{try{x.bounds=this.bounds}
 		}
+	}
+	onClose{
+		
 	}
 }
 
